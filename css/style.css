@@ -196,7 +196,19 @@ justify-content: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: var(--button-color);
   padding: 10px 32px;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: linear;
+
 }
+
+.button-primary:hover,
+.button-primary:focus {
+  background-color: var(--white-color);
+  color: var(--accent-color);
+}
+
 
 button {
     cursor: pointer;
@@ -220,6 +232,10 @@ button {
   background-color: var(--secondary-background);
   border-color: var(--secondary-background);
   border-radius: 4px;
+
+  transition-property: background-color;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
 }
 
 .portfolio-nav-item:not(:last-child) {
