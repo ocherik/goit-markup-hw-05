@@ -63,8 +63,6 @@ body {
 }
 
 .page-header {
-  padding-top: 24px;
-  padding-bottom: 24px;
   border-bottom: solid #ECECEC 1px;
 }
 
@@ -74,7 +72,6 @@ body {
 }
 
 .page-logo {
-  height: 31px;
   font-family: Raleway;
   font-weight: bold;
   font-size: 26px;
@@ -82,6 +79,8 @@ body {
   letter-spacing: 0.03em;
 
   margin-right: 90px;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
 .first-half-logo {
@@ -105,18 +104,20 @@ body {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  position: relative;
 }
 
 .nav-link:not(:last-child) {
   margin-right: 50px;
 }
 
-.menu-link {
+.link {
+  padding-top: 32px;
+  padding-bottom: 32px;
   position: relative;
-  padding-bottom: 24px;
 }
 
-.menu-link::after {
+.link::after {
   content: '';
 
   position: absolute;
@@ -131,7 +132,8 @@ body {
   display: none;
 }
 
-.menu-link:hover::after {
+.link:hover::after,
+.link:focus::after {
   display: block;
 }
 
@@ -318,6 +320,19 @@ margin-right: 8px;
   flex-wrap: wrap;
   margin-left: -30px;
 
+}
+
+.work-image {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
 }
 
 .team-section {
@@ -521,6 +536,7 @@ height: 92px;
   transition: transform 250ms var(--timing-function);
 
   overflow: hidden;
+  display: flex;
 }
 
 .portfolio-item:hover .item-overlay {
@@ -530,11 +546,9 @@ height: 92px;
 .overlay-text {
   color: var(--white-color);
   font-size: 18px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
+  padding: 24px;
+  display: flex;
+  align-items: center;
 }
 
 /* ========== ЗНАЧЕНИЯ ФУТЕРА ========== */
