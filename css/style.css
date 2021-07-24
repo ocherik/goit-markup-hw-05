@@ -40,7 +40,7 @@ a {
   --main-font: 'Robosto', sans-serif;
   --footer-backround: #2f303a;
   --social-icons: rgba(175, 177, 184, 1);
-
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -373,22 +373,6 @@ padding-top: 30px;
   margin-bottom: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .social-list {
   display: flex;
   padding-bottom: 30px;
@@ -484,7 +468,7 @@ height: 92px;
 
 .portfolio-item {
   flex-basis: calc(100% / 3 - 30px);
-    width: 370px;
+  width: 370px;
   border-bottom: solid 1px #EEEEEE;
   border-left: solid 1px #EEEEEE;
   border-right: solid 1px #EEEEEE;
@@ -501,6 +485,57 @@ height: 92px;
 
 .portfolio-item-text {
   padding: 20px 24px;
+}
+
+.item-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-thumb::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+
+}
+
+.portfolio-item:hover .item-thumb::before {
+  transform: translateY(0);
+}
+
+.item-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function);
+
+  overflow: hidden;
+}
+
+.portfolio-item:hover .item-overlay {
+  transform: translateY(0);
+}
+
+.overlay-text {
+  color: var(--white-color);
+  font-size: 18px;
+
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  right: 5%;
+
 }
 
 /* ========== ЗНАЧЕНИЯ ФУТЕРА ========== */
