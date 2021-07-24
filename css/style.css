@@ -265,6 +265,8 @@ margin-right: 8px;
 .item {
   margin-left: 30px;
   flex-basis: calc((100% - 120px) / 4);
+
+  position: relative;
 }
 
 .icon-antenna::before {
@@ -319,21 +321,27 @@ margin-right: 8px;
   display: flex;
   flex-wrap: wrap;
   margin-left: -30px;
-
+  
 }
 
-.work-image {
-  display: inline-block;
-  content: '';
+.work-overlay {
   position: absolute;
-  top: 0;
+ 
+  display: inline-block;
+  bottom: 0;
   left: 0;
   width: 100%;
   height: 70px;
-  background-color: rgba(33, 150, 243, 0.9);
-  transform: translateY(100%);
-  transition: transform 250ms var(--timing-function);
+  background-color: rgba(47, 48, 58, 0.8);
+color: var(--white-color);
 }
+
+.work-text {
+  padding-top: 27px;
+  padding-bottom: 27px;
+text-align: center;
+}
+
 
 .team-section {
   background-color: var(--secondary-background);
