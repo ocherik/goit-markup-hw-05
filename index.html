@@ -70,7 +70,7 @@
           <h1 class="hero-title">
             Эффективные решения <br />для вашего бизнеса
           </h1>
-          <button type="button" class="button-primary">Заказать услугу</button>
+          <button type="button" class="button-primary" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -445,8 +445,16 @@
       </div>
     </footer>
 
-      <!-- Вся твоя разметка, включая разметку модалки -->
-    
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button type="button" class="close-btn" data-modal-close>
+            <svg class="icon-close">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+
       <!-- Ставим перед закрывающим тегом body -->
       <script src="./js/modal.js"></script>
 
