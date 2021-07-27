@@ -198,7 +198,24 @@ body {
 display: flex;
 align-items: center;
 justify-content: center;
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ========== ЗНАЧЕНИЯ КНОПОК ========== */
@@ -376,6 +393,7 @@ color: var(--white-color);
   padding-top: 27px;
   padding-bottom: 27px;
 text-align: center;
+text-transform: uppercase;
 }
 
 
