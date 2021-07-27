@@ -499,7 +499,7 @@ padding-top: 30px;
 .clients-link:hover,
 .clients-link:focus {
   border-color: var(--accent-color);;
-  fill: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .clients-list-icon {
