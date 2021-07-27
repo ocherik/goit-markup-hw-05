@@ -53,6 +53,12 @@ body {
   margin: 0px 0px;
 }
 
+.touch {
+    transition-property: color, fill, background-color, border, box-shadow, opacity, transform;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic);
+  }
+
 /* ========== ЗНАЧЕНИЯ ХЭДЕРА ========== */
 
 .container {
