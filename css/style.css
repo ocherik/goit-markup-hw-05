@@ -207,23 +207,6 @@ justify-content: center;
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ========== ЗНАЧЕНИЯ КНОПОК ========== */
 
 .button-primary {
@@ -398,8 +381,14 @@ color: var(--white-color);
 .work-text {
   padding-top: 27px;
   padding-bottom: 27px;
-text-align: center;
-text-transform: uppercase;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--white-color);
 }
 
 
